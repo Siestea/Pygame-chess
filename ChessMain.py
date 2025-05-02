@@ -203,7 +203,7 @@ def drawPawnPromotion(screen, gs, promotion):
                 if pieceCol*SQ_SIZE <= mouse_pos[0] < (pieceCol+1)*SQ_SIZE: 
                     index = (mouse_pos[1] - pieceRow * SQ_SIZE) // SQ_SIZE
                     if not gs.whiteTurn:
-                        index = 3 - index 
+                        index = -index 
                     gs.board[pieceRow][pieceCol] = promotionColor + promotionPieces[index]
                     choosing = False
 
